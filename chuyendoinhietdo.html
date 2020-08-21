@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyen doi nhiet do</title>
+</head>
+<body>
+    <form>
+        <label>Fahrenheit</label>
+        <input type="number" placeholder="Fahrenheit"
+               oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+        <p>Celcius : <span id="outputCelcius"></span></p>
+    </form>
+    <script>
+        function temperatureConverter(fahrenheit){
+            document.getElementById("outputCelcius").innerHTML = (fahrenheit - 32)/1.8;
+        }
+
+    </script>
+</body>
+</html>
